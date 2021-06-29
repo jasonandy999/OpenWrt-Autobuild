@@ -8,6 +8,8 @@ wget -P feeds/luci/modules/luci-base/htdocs/luci-static/resources/icons/ https:/
 
 # access control
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-accesscontrol package/new/luci-app-accesscontrol
+# DNSFilter
+git clone --depth 1 https://github.com/garypang13/luci-app-dnsfilter package/new/luci-app-dnsfilter
 # FullCone
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/fullconenat package/network/fullconenat
 wget -P target/linux/generic/hack-5.4/ https://raw.githubusercontent.com/immortalwrt/immortalwrt/openwrt-21.02/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch

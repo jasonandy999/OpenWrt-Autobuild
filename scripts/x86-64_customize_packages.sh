@@ -2,8 +2,6 @@
 
 # Access Control
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-accesscontrol package/new/luci-app-accesscontrol
-# AdGuard Home
-svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
 # arpbind
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-arpbind package/new/luci-app-arpbind
 # AutoCore
@@ -13,6 +11,8 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/automount package
 # DDNS
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ddns-scripts_aliyun package/new/ddns-scripts_aliyun
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ddns-scripts_dnspod package/new/ddns-scripts_dnspod
+# DNSFilter
+git clone --depth 1 https://github.com/garypang13/luci-app-dnsfilter package/new/luci-app-dnsfilter
 # Filetransfer
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-filetransfer package/new/luci-app-filetransfer
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-lib-fs package/new/luci-lib-fs

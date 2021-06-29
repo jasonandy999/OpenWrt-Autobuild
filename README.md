@@ -31,10 +31,10 @@
 
 | 应用        |x86-64 |NanoPi R2S|ZeroPi |Phicomm K3|Phicomm K2P|MiWiFi-mini|
 |-------------|:-----:|:--------:|:-----:|:--------:|:---------:|:---------:|
-|AdGuard Home |&check;| &check;  |&check;| &check;  |           |           |
 | AutoCore    |&check;| &check;  |&check;| &check;  |           |           |
 | cpufreq     |       | &check;  |&check;|          |           |           |
 | DDNS        |&check;| &check;  |&check;| &check;  |           |           |
+| DNSFilter   |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
 |FullCone NAT |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
 | frpc        |&check;| &check;  |&check;| &check;  |           |           |
 | frps        |&check;| &check;  |&check;| &check;  |           |           |

@@ -1,4 +1,4 @@
-name: Phicomm-K2P
+name: Phicomm-K2P blob
 
 on:
   repository_dispatch:
@@ -50,7 +50,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         cp ../scripts/k2p_customize_packages.sh .
-        sed -i '3,8d' k2p_customize_packages.sh
         /bin/bash k2p_customize_packages.sh
 
     - name: Convert Translation
@@ -69,7 +68,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         cp ../k2p_defconfig .config
-        sed -i '/luci-app-mtwifi/d' .config
         make defconfig
 
     - name: Make Download
@@ -88,9 +86,11 @@ jobs:
         ls openwrt/bin/targets/ramips/mt7621/
         mv openwrt/bin/targets/ramips/mt7621 ./artifact
         pushd artifact
-        mv config.buildinfo k2p_defconfig
+        mv config.buildinfo k2p_blob_defconfig
         rm -rf packages *.buildinfo *.manifest *kernel.bin sha256sums
-        sha256sum * > k2p.sha256sums
+        filename=`ls *sysupgrade.bin`
+        mv $filename ${filename/phicomm_k2p/phicomm_k2p_blob}
+        sha256sum * > k2p_blob.sha256sums
         popd
 
     - name: Upload Artifact
