@@ -71,7 +71,6 @@ echo "src-git helloworld https://github.com/fw876/helloworld.git" >> feeds.conf.
 
 # Add luci-theme-argon
 #删除原默认主题
-rm -rf package/lean/luci-theme-bootstrap
 rm -rf package/lean/luci-theme-argon 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
@@ -91,10 +90,10 @@ echo "sed -i 's#https://mirrors.cloud.tencent.com/lede/snapshots#https://op.supe
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='K2P'' package/default-settings/files/zzz-default-settings
 
 # 修改默认wifi名称ssid为iMei
-sed -i 's/ssid=OpenWrt/ssid=iMei/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/ssid=OpenWrt/ssid=iMei/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改默认wifi密码key为12345678
-sed -i 's/key=password/key=12345678/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/key=password/key=12345678/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
