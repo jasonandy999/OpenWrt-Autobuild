@@ -4,6 +4,8 @@ on:
   repository_dispatch:
     types: Phicomm-K2P
   workflow_dispatch:
+  watch:
+    types: started
 
 jobs:
   build:
